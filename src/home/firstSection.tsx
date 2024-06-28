@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 const FirstSection = () => {
   return (
     <section className="w-full bg-black pt-[84px]">
