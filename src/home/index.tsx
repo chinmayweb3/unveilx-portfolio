@@ -6,7 +6,7 @@ import ThirdSection from "./thirdSection";
 
 const Home = () => {
   return (
-    <main className="text-black">
+    <main>
       <FirstSection />
       <SecondSection />
       <ThirdSection />

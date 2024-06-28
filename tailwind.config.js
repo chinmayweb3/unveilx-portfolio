@@ -13,6 +13,7 @@ export default {
       },
       fontFamily: {
         inter: ["var(--default-font)", "sans-serif"],
+        Thunder: ["Thunder", "sans-serif"],
       },
     },
   },
