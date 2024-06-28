@@ -1,6 +1,6 @@
 const FirstSection = () => {
   return (
-    <section className="w-full bg-black pt-[84px]">
+    <section className="w-full bg-black pt-[84px] pb-[112px]">
       <div className="max-w-[1280px] mx-auto">
         <div className="w-[90%]">
           <h1 className="uppercase text-[10rem] font-Thunder leading-[1.1] mt-[20px] mb-[10px]">
