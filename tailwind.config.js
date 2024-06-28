@@ -11,6 +11,9 @@ export default {
         gray3: "var(--gray-3)",
         "lime-green": "var(--lime-green)",
       },
+      fontFamily: {
+        inter: ["var(--default-font)", "sans-serif"],
+      },
     },
   },
   plugins: [],
