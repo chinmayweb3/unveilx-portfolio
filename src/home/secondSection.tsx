@@ -1,6 +1,6 @@
 const SecondSection = () => {
   return (
-    <section className="w-full py-[112px] bg-gray2 text-black">
+    <section className="w-full px-[60px] py-[112px] bg-gray2 text-black">
       <div className="max-w-[1280px] mx-auto">
         <div className="w-full grid grid-cols-[0.75fr_1fr]">
           <div className="uppercase text-[1rem]">About Me</div>

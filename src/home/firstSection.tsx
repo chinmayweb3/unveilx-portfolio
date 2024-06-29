@@ -1,6 +1,6 @@
 const FirstSection = () => {
   return (
-    <section className="w-full bg-black pt-[84px] pb-[112px]">
+    <section className="w-full px-[60px] bg-black pt-[84px] pb-[112px]">
       <div className="max-w-[1280px] mx-auto">
         <div className="w-[90%]">
           <h1 className="uppercase text-[10rem] font-Thunder leading-[1.1] mt-[20px] mb-[10px]">
@@ -23,7 +23,7 @@ const FirstSection = () => {
         </div>
         <div className="flex justify-between items-center mt-[150px]">
           <div>
-            <button className="flex justify-center items-center gap-[32px] border-b-[1px] border-white text-[1.15rem] pb-[10px] hover:border-lime-green hover:text-lime-green duration-100">
+            <button className="flex justify-center items-center gap-[32px] border-b-[1px] border-black text-[1.15rem] pb-[10px] hover:border-lime-green hover:text-lime-green duration-100">
               <span>Get in Touch</span> <span className="font-black">↗︎</span>
             </button>
           </div>
