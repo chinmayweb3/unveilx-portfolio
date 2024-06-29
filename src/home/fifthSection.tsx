@@ -28,6 +28,42 @@ const info = [
   },
 ];
 
+const blogInfo = [
+  {
+    title: "Design",
+    para: "10 Tips for Elevating Your Design Game",
+    date: "June 27, 2023",
+  },
+  {
+    title: "Fintech",
+    para: "10 Tips for Elevating Your Design Game",
+    date: "June 27, 2023",
+  },
+  {
+    title: "Fintech",
+    para: "10 Tips for Elevating Your Design Game",
+    date: "June 27, 2023",
+  },
+];
+
+const Blog = () => (
+  <>
+    {blogInfo.map((t, i) => {
+      return (
+        <div key={t.title + i} className="flex flex-col gap-[4px] ">
+          <button className="w-fit text-[0.82rem] border-[0.5px] border-white rounded-[2rem] py-[4px] px-[10px] mb-[0.5rem] ">
+            {t.title}
+          </button>
+          <h3 className="text-[2.75rem] font-medium font-Thunder leading-[1] ">
+            {t.para}
+          </h3>
+          <p className="text-gray1 text-[1rem] ">{t.date}</p>
+        </div>
+      );
+    })}
+  </>
+);
+
 const Card = ({ move, item }: { move: number; item: Record<any, string> }) => {
   return (
     <div
@@ -92,6 +128,14 @@ const FifthSection = () => {
         </div>
         <div className="py-[112px] ">
           <div></div>
+        </div>
+        <div>
+          <h2 className="font-Thunder text-[5rem] font-semibold uppercase mb-[3.15rem] ">
+            latest from blog
+          </h2>
+          <div className="grid grid-cols-3 gap-x-[32px] ">
+            <Blog />
+          </div>
         </div>
       </div>
     </section>
