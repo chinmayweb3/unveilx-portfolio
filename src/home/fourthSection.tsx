@@ -81,7 +81,7 @@ const FourthSection = () => {
           </div>
           <div>
             {info.map((item, index) => (
-              <Accord title={item} index={index + 1} />
+              <Accord key={item} title={item} index={index + 1} />
             ))}
           </div>
         </div>

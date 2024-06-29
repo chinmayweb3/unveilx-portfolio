@@ -67,7 +67,7 @@ const ThirdSection = () => {
         <div className="mt-[56px]">
           <div className="grid grid-cols-2 gap-x-[2rem] gap-y-[2.2rem] ">
             {info.map((i) => (
-              <Project item={i} />
+              <Project key={i.title} item={i} />
             ))}
           </div>
         </div>
