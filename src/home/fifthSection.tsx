@@ -1,16 +1,41 @@
 import React from "react";
 
-const Card = ({ move }: { move: number }) => {
+const info = [
+  {
+    name: "Shahin Alam",
+    subTitle: "CEO, SamirTS",
+    img: "https://cdn.prod.website-files.com/6669563d598cbb2a4f78544f/6669563d598cbb2a4f7854c2_Person%2004.webp",
+  },
+  {
+    name: "Shahin Alam",
+    subTitle: "CEO, SamirTS",
+    img: "https://cdn.prod.website-files.com/6669563d598cbb2a4f78544f/6669563d598cbb2a4f7854c4_Person%2002.webp",
+  },
+  {
+    name: "Shahin Alam",
+    subTitle: "CEO, SamirTS",
+    img: "https://cdn.prod.website-files.com/6669563d598cbb2a4f78544f/6669563d598cbb2a4f7854c0_Person%2001.webp",
+  },
+  {
+    name: "Shahin Alam",
+    subTitle: "CEO, SamirTS",
+    img: "https://cdn.prod.website-files.com/6669563d598cbb2a4f78544f/6669563d598cbb2a4f7854c3_Person%2003.webp",
+  },
+  {
+    name: "Shahin Alam",
+    subTitle: "CEO, SamirTS",
+    img: "https://cdn.prod.website-files.com/6669563d598cbb2a4f78544f/6669563d598cbb2a4f7854c1_Person%2006.webp",
+  },
+];
+
+const Card = ({ move, item }: { move: number; item: Record<any, string> }) => {
   return (
     <div
       style={{ transform: `translateX(-${move * (440 + 24)}px)` }}
       className={`shrink-0 w-[440px] duration-700 relative bg-gray3 mr-[24px] inline-block border-[2px] border-[#424242] rounded-[12px] `}
     >
       <div className=" p-[2rem]">
-        <img
-          className="aspect-square w-[96px] mb-[20px] "
-          src="https://cdn.prod.website-files.com/6669563d598cbb2a4f78544f/6669563d598cbb2a4f7854c2_Person%2004.webp"
-        />
+        <img className="aspect-square w-[96px] mb-[20px] " src={item.img} />
 
         <div className="mb-[24px]">
           <p className="text-[1.125rem] leading-[1.7em]  ">
@@ -20,9 +45,9 @@ const Card = ({ move }: { move: number }) => {
           </p>
         </div>
         <div className="text-[1.25rem] mb-[0.5rem] font-semibold">
-          Shahin Alam
+          {item.name}
         </div>
-        <div className="text-[1rem] text-gray1 ">CEO, SamirTS</div>
+        <div className="text-[1rem] text-gray1 ">{item.subTitle}</div>
       </div>
     </div>
   );
@@ -30,7 +55,6 @@ const Card = ({ move }: { move: number }) => {
 
 const FifthSection = () => {
   const [card, setCard] = React.useState(0);
-  console.log("moving ", card);
 
   return (
     <section className="w-full px-[60px] py-[112px] bg-black text-white overflow-hidden">
@@ -49,8 +73,12 @@ const FifthSection = () => {
               <img src="https://cdn.prod.website-files.com/6669563d598cbb2a4f78544f/6669563d598cbb2a4f7854d8_Arrow-Left.svg" />
             </button>
             <button
-              onClick={() => setCard((prev) => prev + 1)}
-              className="flex justify-center items-center w-[40px] aspect-square "
+              onClick={() =>
+                setCard((prev) => (prev == info.length - 3 ? prev : prev + 1))
+              }
+              className={`flex justify-center items-center w-[40px] aspect-square ${
+                card == info.length - 3 ? "opacity-[0.48] cursor-default" : ""
+              }`}
             >
               <img src="https://cdn.prod.website-files.com/6669563d598cbb2a4f78544f/6669563d598cbb2a4f7854d9_Arrow-Right.svg" />
             </button>
@@ -58,7 +86,12 @@ const FifthSection = () => {
         </div>
 
         <div className="mt-[60px] flex justify-start flex-nowrap ">
-          <Card move={card} />
+          {info.map((i, index) => (
+            <Card key={i.name + index} item={i} move={card} />
+          ))}
+        </div>
+        <div className="py-[112px] ">
+          <div></div>
         </div>
       </div>
     </section>
