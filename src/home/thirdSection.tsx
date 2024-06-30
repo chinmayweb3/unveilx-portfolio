@@ -35,6 +35,7 @@ const Project = ({ item }: Iitem) => {
       className="relative rounded-xl w-full overflow-hidden group"
     >
       <img
+        loading="lazy"
         className="aspect-[4:3] group-hover:scale-[1.1] duration-[700ms] ease-in-out "
         src={item.src}
       />

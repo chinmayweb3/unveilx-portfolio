@@ -117,14 +117,14 @@ const Marquee = () => {
         {marqueeInfo.map((n, i) => {
           return (
             <div className="shrink-0 mr-[80px] " key={"marquee" + i}>
-              <img src={n} alt="logo images" />
+              <img loading="lazy" src={n} alt="logo images" />
             </div>
           );
         })}
         {marqueeInfo.map((n, i) => {
           return (
             <div className="shrink-0 mr-[80px] " key={"marquee2" + i}>
-              <img src={n} alt="logo images" />
+              <img loading="lazy" src={n} alt="logo images" />
             </div>
           );
         })}
@@ -150,7 +150,10 @@ const FifthSection = () => {
                 card == 0 ? "opacity-[0.48] cursor-default " : ""
               }`}
             >
-              <img src="https://cdn.prod.website-files.com/6669563d598cbb2a4f78544f/6669563d598cbb2a4f7854d8_Arrow-Left.svg" />
+              <img
+                loading="lazy"
+                src="https://cdn.prod.website-files.com/6669563d598cbb2a4f78544f/6669563d598cbb2a4f7854d8_Arrow-Left.svg"
+              />
             </button>
             <button
               onClick={() =>
@@ -160,7 +163,10 @@ const FifthSection = () => {
                 card == info.length - 3 ? "opacity-[0.48] cursor-default" : ""
               }`}
             >
-              <img src="https://cdn.prod.website-files.com/6669563d598cbb2a4f78544f/6669563d598cbb2a4f7854d9_Arrow-Right.svg" />
+              <img
+                loading="lazy"
+                src="https://cdn.prod.website-files.com/6669563d598cbb2a4f78544f/6669563d598cbb2a4f7854d9_Arrow-Right.svg"
+              />
             </button>
           </div>
         </div>
