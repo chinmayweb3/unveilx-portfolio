@@ -48,8 +48,8 @@ const Project = ({ item }: Iitem) => {
       }}
       onMouseEnter={() => {
         time = setTimeout(() => {
-          if (playRef.current) playRef.current.style.transition = "150ms";
-        }, 320);
+          if (playRef.current) playRef.current.style.transition = "50ms";
+        }, 200);
       }}
       onMouseLeave={() => {
         clearTimeout(time);
