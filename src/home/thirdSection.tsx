@@ -1,7 +1,9 @@
+import { useRef, useState } from "react";
+
 const info = [
   {
     title: "Heath care",
-    para: "App Design",
+    para: "624 x 468",
     src: "https://cdn.prod.website-files.com/6669563d598cbb2a4f785473/6669563d598cbb2a4f78547c_2.webp",
   },
   {
@@ -29,22 +31,58 @@ type Iitem = {
 };
 
 const Project = ({ item }: Iitem) => {
+  const divref = useRef<HTMLDivElement>(null);
+  const playref = useRef<HTMLDivElement>(null);
+  let time: ReturnType<typeof setTimeout>;
+
   return (
     <div
-      key={item.title}
-      className="relative rounded-xl w-full overflow-hidden group"
+      ref={divref}
+      onMouseMove={(e) => {
+        if (!divref.current || !playref.current) return;
+        const r = divref.current?.getBoundingClientRect();
+
+        const positionX = e.clientX - r.left - r.width / 2;
+        const positionY = e.clientY - r.top - r.height / 2;
+        playref.current.style.transform = `translate(${positionX}px,${positionY}px)`;
+      }}
+      onMouseEnter={() => {
+        time = setTimeout(() => {
+          if (playref.current) playref.current.style.transition = "50ms";
+          console.log("chagned");
+        }, 180);
+      }}
+      onMouseLeave={(e) => {
+        clearTimeout(time);
+        if (playref.current) {
+          playref.current.style.transition = "200ms";
+          playref.current.style.transform = `translate(0px,0px`;
+        }
+      }}
+      className="relative flex justify-center rounded-xl items-center overflow-hidden"
     >
-      <img
-        loading="lazy"
-        className="aspect-[4:3] group-hover:scale-[1.1] duration-[700ms] ease-in-out "
-        src={item.src}
-      />
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#0c0c0c05] to-[#000000c4] " />
-      <div className="absolute bottom-[5%] left-0 w-full text-center text-white">
-        <h2 className="uppercase font-Thunder text-[3.25rem] font-semibold leading-[1.1]">
-          {item.title}
-        </h2>
-        <p className="text-[1rem] mb-[16px]">{item.para}</p>
+      <div key={item.title} className="relative w-full group">
+        <img
+          loading="lazy"
+          className="aspect-[4:3] group-hover:scale-[1.1] duration-[700ms] ease-in-out "
+          src={item.src}
+        />
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#0c0c0c05] to-[#000000c4] " />
+        <div className="absolute bottom-[5%] left-0 w-full text-center text-white">
+          <h2 className="uppercase font-Thunder text-[3.25rem] font-semibold leading-[1.1]">
+            {item.title}
+          </h2>
+          <p className="text-[1rem] mb-[16px]">{item.para}</p>
+        </div>
+      </div>
+      <div
+        ref={playref}
+        style={{
+          transform: "translate(0px,0px)",
+        }}
+        className="pointer-events-none duration-150 ease-in absolute bg-slate-50"
+      >
+        play
       </div>
     </div>
   );
