@@ -48,14 +48,13 @@ const Project = ({ item }: Iitem) => {
       }}
       onMouseEnter={() => {
         time = setTimeout(() => {
-          if (playRef.current)
-            playRef.current.style.transition = "transform 50ms, scale 2s";
+          if (playRef.current) playRef.current.style.transition = "150ms";
         }, 320);
       }}
       onMouseLeave={() => {
         clearTimeout(time);
         if (playRef.current) {
-          playRef.current.style.transition = "transform 300ms, scale 2s";
+          playRef.current.style.transition = "150ms";
           playRef.current.style.transform = `translate(0px,0px) scale(0,0)`;
         }
       }}
@@ -79,7 +78,7 @@ const Project = ({ item }: Iitem) => {
         ref={playRef}
         style={{
           transform: "translate(0px,0px) scale(0,0)",
-          transition: "transform 300ms, scale 2s",
+          transition: "150ms",
         }}
         className="pointer-events-none ease-out absolute"
       >
