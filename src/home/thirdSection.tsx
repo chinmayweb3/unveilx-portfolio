@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
 const info = [
   {
@@ -31,32 +31,32 @@ type Iitem = {
 };
 
 const Project = ({ item }: Iitem) => {
-  const divref = useRef<HTMLDivElement>(null);
-  const playref = useRef<HTMLDivElement>(null);
+  const parentRef = useRef<HTMLDivElement>(null);
+  const playRef = useRef<HTMLDivElement>(null);
   let time: ReturnType<typeof setTimeout>;
 
   return (
     <div
-      ref={divref}
+      ref={parentRef}
       onMouseMove={(e) => {
-        if (!divref.current || !playref.current) return;
-        const r = divref.current?.getBoundingClientRect();
+        if (!parentRef.current || !playRef.current) return;
+        const r = parentRef.current?.getBoundingClientRect();
 
-        const positionX = e.clientX - r.left - r.width / 2;
-        const positionY = e.clientY - r.top - r.height / 2;
-        playref.current.style.transform = `translate(${positionX}px,${positionY}px)`;
+        const positionX = Math.floor(e.clientX - r.left - r.width / 2);
+        const positionY = Math.floor(e.clientY - r.top - r.height / 2);
+        playRef.current.style.transform = `translate(${positionX}px,${positionY}px) scale(1,1)`;
       }}
       onMouseEnter={() => {
         time = setTimeout(() => {
-          if (playref.current) playref.current.style.transition = "50ms";
-          console.log("chagned");
-        }, 180);
+          if (playRef.current)
+            playRef.current.style.transition = "transform 50ms, scale 2s";
+        }, 320);
       }}
       onMouseLeave={() => {
         clearTimeout(time);
-        if (playref.current) {
-          playref.current.style.transition = "200ms";
-          playref.current.style.transform = `translate(0px,0px`;
+        if (playRef.current) {
+          playRef.current.style.transition = "transform 300ms, scale 2s";
+          playRef.current.style.transform = `translate(0px,0px) scale(0,0)`;
         }
       }}
       className="relative flex justify-center rounded-xl items-center overflow-hidden"
@@ -76,11 +76,12 @@ const Project = ({ item }: Iitem) => {
         </div>
       </div>
       <div
-        ref={playref}
+        ref={playRef}
         style={{
-          transform: "translate(0px,0px)",
+          transform: "translate(0px,0px) scale(0,0)",
+          transition: "transform 300ms, scale 2s",
         }}
-        className="pointer-events-none duration-150 ease-out absolute "
+        className="pointer-events-none ease-out absolute"
       >
         <div className="w-[100px] aspect-square flex justify-center items-center bg-white rounded-full ">
           <div className="w-[48px] aspect-square flex justify-center items-center bg-black rounded-full">
