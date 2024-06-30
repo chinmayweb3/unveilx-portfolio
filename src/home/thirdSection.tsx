@@ -52,7 +52,7 @@ const Project = ({ item }: Iitem) => {
           console.log("chagned");
         }, 180);
       }}
-      onMouseLeave={(e) => {
+      onMouseLeave={() => {
         clearTimeout(time);
         if (playref.current) {
           playref.current.style.transition = "200ms";
@@ -80,9 +80,16 @@ const Project = ({ item }: Iitem) => {
         style={{
           transform: "translate(0px,0px)",
         }}
-        className="pointer-events-none duration-150 ease-in absolute bg-slate-50"
+        className="pointer-events-none duration-150 ease-out absolute "
       >
-        play
+        <div className="w-[100px] aspect-square flex justify-center items-center bg-white rounded-full ">
+          <div className="w-[48px] aspect-square flex justify-center items-center bg-black rounded-full">
+            <img
+              className="w-[24px] aspect-square "
+              src="https://cdn.prod.website-files.com/6669563d598cbb2a4f78544f/6669563d598cbb2a4f7854f2_Arrow.svg"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
