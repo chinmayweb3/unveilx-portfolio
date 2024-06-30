@@ -15,8 +15,9 @@ const Accord = ({ title, index }: { title: string; index: number }) => {
       onClick={() =>
         setOpen((prev) => (prev == "closed" ? "opened" : "closed"))
       }
+      className={`${info.length == index ? "border-b-[1px] border-black" : ""}`}
     >
-      <div className="border-black border-t-[1px] py-[32px] grid grid-cols-[calc(32px+10rem)_2fr_1fr] items-center cursor-pointer">
+      <div className="border-black border-t-[1px] py-[32px] grid grid-cols-[calc(32px+10rem)_2fr_1fr] items-center cursor-pointer ">
         <div>
           <motion.img
             animate={open}
