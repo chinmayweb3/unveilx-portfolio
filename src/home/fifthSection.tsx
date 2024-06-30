@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const info = [
   {
@@ -46,6 +47,15 @@ const blogInfo = [
   },
 ];
 
+const marqueeInfo = [
+  "https://cdn.prod.website-files.com/6669563d598cbb2a4f78544f/6669563d598cbb2a4f7854dc_Logo%201.svg",
+  "https://cdn.prod.website-files.com/6669563d598cbb2a4f78544f/6669563d598cbb2a4f7854dd_Logo%202.svg",
+  "https://cdn.prod.website-files.com/6669563d598cbb2a4f78544f/6669563d598cbb2a4f7854de_Logo%203.svg",
+  "https://cdn.prod.website-files.com/6669563d598cbb2a4f78544f/6669563d598cbb2a4f7854db_Logo%204.svg",
+  "https://cdn.prod.website-files.com/6669563d598cbb2a4f78544f/6669563d598cbb2a4f7854df_Logo%205.svg",
+  "https://cdn.prod.website-files.com/65de23aa76e08c7eaf412465/65de23aa76e08c7eaf4124b8_Logo%2001.png",
+];
+
 const Blog = () => (
   <>
     {blogInfo.map((t, i) => {
@@ -89,6 +99,40 @@ const Card = ({ move, item }: { move: number; item: Record<any, string> }) => {
   );
 };
 
+const Marquee = () => {
+  return (
+    <div className="overflow-hidden">
+      <motion.div
+        animate={{
+          x: "-50%",
+        }}
+        transition={{
+          repeat: Infinity,
+          repeatType: "loop",
+          duration: 15,
+          ease: "linear",
+        }}
+        className="flex items-center min-w-max"
+      >
+        {marqueeInfo.map((n, i) => {
+          return (
+            <div className="shrink-0 mr-[80px] " key={"marquee" + i}>
+              <img src={n} alt="logo images" />
+            </div>
+          );
+        })}
+        {marqueeInfo.map((n, i) => {
+          return (
+            <div className="shrink-0 mr-[80px] " key={"marquee2" + i}>
+              <img src={n} alt="logo images" />
+            </div>
+          );
+        })}
+      </motion.div>
+    </div>
+  );
+};
+
 const FifthSection = () => {
   const [card, setCard] = React.useState(0);
 
@@ -127,7 +171,7 @@ const FifthSection = () => {
           ))}
         </div>
         <div className="py-[112px] ">
-          <div></div>
+          <Marquee />
         </div>
         <div>
           <h2 className="font-Thunder text-[5rem] font-semibold uppercase mb-[3.15rem] ">
