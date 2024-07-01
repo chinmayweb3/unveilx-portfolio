@@ -1,3 +1,5 @@
+import { ButtonField } from "../components/buttons";
+
 const FirstSection = () => {
   return (
     <section className="w-full px-[60px] bg-gray2 text-black pb-[60px] ">
@@ -16,16 +18,10 @@ const FirstSection = () => {
             viverra ornare, eros dolor interdum nulla, ut commodo diam libero
             vitae erat.
           </p>
-          <div className="flex gap-[12px] mt-[40px] ">
-            <button className="py-[6px] px-[16px] text-[0.9rem] rounded-[100px] border-black border ">
-              BEHANCE
-            </button>
-            <button className="py-[6px] px-[16px] text-[0.9rem] rounded-[100px] border-black border ">
-              DRIBBLE
-            </button>
-            <button className="py-[6px] px-[16px] text-[0.9rem] rounded-[100px] border-black border ">
-              TWITTER
-            </button>
+          <div className="flex gap-[12px] mt-[40px] border-black">
+            <ButtonField>behance</ButtonField>
+            <ButtonField>dribble</ButtonField>
+            <ButtonField>twitter</ButtonField>
           </div>
         </div>
       </div>

@@ -12,7 +12,7 @@ const ButtonField = React.forwardRef<HTMLButtonElement, buttonProps>(
       <button
         ref={ref}
         className={twMerge(
-          "px-[16px] py-[6px] rounded-[100px] text-[0.9rem] uppercase border duration-100",
+          "px-[16px] py-[6px] rounded-[100px] text-[0.9rem] uppercase border duration-100 border-inherit text-inherit",
           className
         )}
         {...props}
