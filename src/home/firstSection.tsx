@@ -1,3 +1,5 @@
+import ButtonField from "../components/buttons";
+
 const FirstSection = () => {
   return (
     <section className="w-full px-[60px] bg-black pt-[84px] pb-[112px]">
@@ -28,15 +30,16 @@ const FirstSection = () => {
             </button>
           </div>
           <div className="flex gap-[12px] uppercase justify-end">
-            <button className="px-[16px] py-[10px] uppercase border border-white text-[0.9rem] rounded-[100px] hover:border-lime-green hover:text-lime-green duration-100">
+            <button className="px-[16px] py-[6px] uppercase border border-white text-[0.9rem] rounded-[100px] hover:border-lime-green hover:text-lime-green duration-100">
               behance
             </button>
-            <button className="px-[16px] py-[10px] uppercase border border-white text-[0.9rem] rounded-[100px] hover:border-lime-green hover:text-lime-green duration-100">
+            <button className="px-[16px] py-[6px] uppercase border border-white text-[0.9rem] rounded-[100px] hover:border-lime-green hover:text-lime-green duration-100">
               dribble
             </button>
-            <button className="px-[16px] py-[10px] uppercase border border-white text-[0.9rem] rounded-[100px] hover:border-lime-green hover:text-lime-green duration-100">
+            <button className="px-[16px] py-[6px] uppercase border border-white text-[0.9rem] rounded-[100px] hover:border-lime-green hover:text-lime-green duration-100">
               twitter
             </button>
+            {/* <ButtonField>sd</ButtonField> */}
           </div>
         </div>
       </div>
