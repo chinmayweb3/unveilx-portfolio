@@ -38,14 +38,17 @@ const Navbar = () => {
         <nav className="flex items-center">
           {navList.map((n, i) =>
             !n.path ? (
-              <button className="px-[16px] py-[8px] hover:underline">
+              <button
+                key={n.name + i}
+                className="px-[16px] py-[8px] hover:underline"
+              >
                 {n.name}
               </button>
             ) : (
               <Link
                 onClick={() => setcss({ bg: n.bg, color: n.color })}
                 to={n.path}
-                key={i}
+                key={n.name + i}
                 className={`px-[16px] py-[8px] ${
                   n.path == p ? "" : "hover:underline"
                 }`}
