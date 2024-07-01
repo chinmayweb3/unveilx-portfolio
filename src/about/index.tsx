@@ -4,7 +4,7 @@ import FourthSection from "./fourthSection";
 import SecondSection from "./secondSection";
 import ThirdSection from "./thirdSection";
 
-const Index = () => {
+const About = () => {
   return (
     <main>
       <FirstSection />
@@ -16,4 +16,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default About;

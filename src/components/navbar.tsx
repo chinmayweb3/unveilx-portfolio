@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const navList = [
@@ -12,6 +12,11 @@ const navList = [
 const Navbar = () => {
   const [css, setcss] = React.useState({ bg: "black", color: "white" });
   const p = location.pathname;
+
+  useEffect(() => {
+    const n = navList.find((n) => n.path == p);
+    setcss({ bg: n?.bg ?? "black", color: n?.color ?? "white" });
+  }, []);
 
   return (
     <div className={`w-full px-[60px] bg-${css.bg} text-${css.color}`}>
