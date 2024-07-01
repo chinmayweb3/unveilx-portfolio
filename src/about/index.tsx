@@ -1,4 +1,5 @@
 import FifthSection from "./fifthSection";
+import SixthSection from "../home/fifthSection";
 import FirstSection from "./firstSection";
 import FourthSection from "./fourthSection";
 import SecondSection from "./secondSection";
@@ -12,6 +13,7 @@ const About = () => {
       <ThirdSection />
       <FourthSection />
       <FifthSection />
+      <SixthSection />
     </main>
   );
 };
