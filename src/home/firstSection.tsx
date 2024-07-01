@@ -1,4 +1,4 @@
-import ButtonField from "../components/buttons";
+import { ButtonField } from "../components/buttons";
 
 const FirstSection = () => {
   return (

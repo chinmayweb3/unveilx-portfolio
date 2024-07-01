@@ -23,4 +23,4 @@ const ButtonField = React.forwardRef<HTMLButtonElement, buttonProps>(
   }
 );
 
-export default ButtonField;
+export { ButtonField };
