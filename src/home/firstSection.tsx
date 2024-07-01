@@ -25,21 +25,20 @@ const FirstSection = () => {
         </div>
         <div className="flex justify-between items-center mt-[150px]">
           <div>
-            <button className="flex justify-center items-center gap-[32px] border-b-[1px] border-black text-[1.15rem] pb-[10px] hover:border-lime-green hover:text-lime-green duration-100">
-              <span>Get in Touch</span> <span className="font-black">↗︎</span>
+            <button className="flex justify-center items-center gap-[32px] border-b-[1px] border-white text-[1.15rem] pb-[10px] hover:border-lime-green hover:text-lime-green duration-100">
+              <span>Get in touch</span> <span className="font-black">↗︎</span>
             </button>
           </div>
           <div className="flex gap-[12px] uppercase justify-end">
-            <button className="px-[16px] py-[6px] uppercase border border-white text-[0.9rem] rounded-[100px] hover:border-lime-green hover:text-lime-green duration-100">
+            <ButtonField className=" py-[10px] border-white hover:border-lime-green hover:text-lime-green">
               behance
-            </button>
-            <button className="px-[16px] py-[6px] uppercase border border-white text-[0.9rem] rounded-[100px] hover:border-lime-green hover:text-lime-green duration-100">
+            </ButtonField>
+            <ButtonField className=" py-[10px] border-white hover:border-lime-green hover:text-lime-green">
               dribble
-            </button>
-            <button className="px-[16px] py-[6px] uppercase border border-white text-[0.9rem] rounded-[100px] hover:border-lime-green hover:text-lime-green duration-100">
+            </ButtonField>
+            <ButtonField className=" py-[10px] border-white hover:border-lime-green hover:text-lime-green">
               twitter
-            </button>
-            {/* <ButtonField>sd</ButtonField> */}
+            </ButtonField>
           </div>
         </div>
       </div>
