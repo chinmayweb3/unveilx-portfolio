@@ -1,3 +1,13 @@
+const footList = [
+  "Licenses",
+  "Style guide",
+  "About ",
+  "Changelog",
+  "Instructions",
+  "404 page",
+  "Protected Page",
+  "Contact",
+];
 const Footer = () => {
   return (
     <footer className="w-full px-[60px] py-[32px] bg-lime-green text-black">
@@ -20,14 +30,11 @@ const Footer = () => {
             <span className="underline">Webflow</span>
           </div>
           <div className="grid grid-cols-4 justify-items-start font-medium text-[1rem] leading-[1.5] gap-x-[2.5rem] gap-y-[1.7rem] ">
-            <button>Licenses</button>
-            <button>Style guide</button>
-            <button>About </button>
-            <button>Changelog</button>
-            <button>Instructions</button>
-            <button>404 page</button>
-            <button>Protected Page</button>
-            <button>Contact</button>
+            {footList.map((n) => (
+              <button className="hover:underline" key={n}>
+                {n}
+              </button>
+            ))}
           </div>
         </div>
       </div>
