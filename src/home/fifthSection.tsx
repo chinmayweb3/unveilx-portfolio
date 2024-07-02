@@ -34,41 +34,7 @@ const info = [
   },
 ];
 
-const blogInfo = [
-  {
-    title: 'Design',
-    para: '10 Tips for Elevating Your Design Game',
-    date: 'June 27, 2023',
-  },
-  {
-    title: 'Fintech',
-    para: '10 Tips for Elevating Your Design Game',
-    date: 'June 27, 2023',
-  },
-  {
-    title: 'Fintech',
-    para: '10 Tips for Elevating Your Design Game',
-    date: 'June 27, 2023',
-  },
-];
-
 const marqueeInfo = ['./logo1.svg', './logo2.svg', './logo3.svg', './logo4.svg', './logo5.svg', './logo6.svg'];
-
-const Blog = () => (
-  <>
-    {blogInfo.map((t, i) => {
-      return (
-        <div key={t.title + i} className="flex flex-col gap-[4px]">
-          <button className="mb-[0.5rem] w-fit rounded-[2rem] border-[0.5px] border-white px-[10px] py-[4px] text-[0.82rem]">
-            {t.title}
-          </button>
-          <h3 className="font-Thunder text-[2.75rem] font-medium leading-[1]">{t.para}</h3>
-          <p className="text-[1rem] text-gray1">{t.date}</p>
-        </div>
-      );
-    })}
-  </>
-);
 
 const ReviewCard = ({ move, item }: { move: number; item: Record<any, string> }) => {
   return (
@@ -130,7 +96,7 @@ const FifthSection = () => {
   const [card, setCard] = React.useState(0);
 
   return (
-    <section className="w-full overflow-hidden bg-black px-[60px] py-[112px] text-white msm:px-[6%]">
+    <section className="w-full overflow-hidden bg-black px-[60px] py-[112px] text-white msm:px-[6%] msm:py-[80px]">
       <div className="mx-auto max-w-[1280px]">
         <div className="flex items-start justify-between">
           <h2 className="font-Thunder text-[5rem] font-semibold uppercase msm:text-[2.85rem]">what they think</h2>
@@ -159,14 +125,8 @@ const FifthSection = () => {
             <ReviewCard key={i.name + index} item={i} move={card} />
           ))}
         </div>
-        <div className="py-[112px]">
+        <div className="pt-[112px] msm:pt-[80px]">
           <Marquee />
-        </div>
-        <div>
-          <h2 className="mb-[3.15rem] font-Thunder text-[5rem] font-semibold uppercase msm:text-[2.85rem]">latest from blog</h2>
-          <div className="grid grid-cols-3 gap-x-[32px] msm:grid-cols-1 msm:gap-[24px]">
-            <Blog />
-          </div>
         </div>
       </div>
     </section>

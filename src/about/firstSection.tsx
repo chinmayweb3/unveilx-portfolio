@@ -7,7 +7,7 @@ const FirstSection = () => {
         <div className="flex flex-col items-center justify-start text-center">
           <h1 className="mb-[10px] mt-[20px] pb-[16px] font-Thunder text-[10rem] font-semibold uppercase leading-[1.1] mlg:text-[7rem] msm:text-[3rem]">
             bringing{' '}
-            <span className="inline-block h-[40px]">
+            <span className="inline-block msm:h-[40px]">
               <img className="msm:h-full" src="./header.webp" />
             </span>{' '}
             best design solutions
