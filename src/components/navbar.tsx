@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { IoIosMenu } from 'react-icons/io';
-import { useCycle } from 'framer-motion';
+import { AnimatePresence, useCycle, motion } from 'framer-motion';
 
 const navList = [
   { name: 'Home', path: '/', color: 'white', bg: 'black' },
@@ -23,7 +23,7 @@ const Navbar = () => {
   return (
     <div className={`w-full px-[60px] msm:px-[6%] bg-${css.bg} text-${css.color}`}>
       <header className="mx-auto flex h-[91px] max-w-[1280px] items-center justify-between msm:h-[80px]">
-        <Link onClick={() => setcss({ bg: 'black', color: 'white' })} to={'/'}>
+        <Link className="z-[20]" onClick={() => setcss({ bg: 'black', color: 'white' })} to={'/'}>
           <svg className="w-[104px]" width="143" height="25" viewBox="0 0 143 25" fill="none">
             <path
               fill={css.color}
@@ -49,7 +49,7 @@ const Navbar = () => {
             )
           )}
         </nav>
-        <Mobile />
+        <Mobile css={css} setcss={setcss} />
       </header>
     </div>
   );
@@ -57,13 +57,51 @@ const Navbar = () => {
 
 export default Navbar;
 
-const Mobile = React.memo(() => {
+const Mobile = React.memo(({ css, setcss }: { css: any; setcss: any }) => {
   const [open, setOpen] = useCycle(false, true);
   return (
     <>
-      <nav className="hidden aspect-square place-content-center msm:grid">
+      <nav onClick={() => setOpen()} className="z-[9] hidden aspect-square place-content-center msm:grid">
         <IoIosMenu className="h-[2rem] w-[2rem]" />
       </nav>
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ y: '-100%' }}
+            animate={{ y: 0 }}
+            exit={{ y: '-100%' }}
+            transition={{
+              duration: 0.2,
+            }}
+            className={`absolute left-0 top-0 flex h-[100vh] w-full flex-col items-center justify-center gap-[30px] pb-[250px] text-[22px] bg-${css.bg} text-${css.color}`}
+          >
+            {navList.map((n, i) => {
+              if (!n.path) {
+                return (
+                  <button onClick={() => setOpen()} key={n.name + i} className="px-[16px] py-[8px] uppercase">
+                    {n.name}
+                  </button>
+                );
+              }
+              return (
+                <>
+                  <Link
+                    onClick={() => {
+                      setcss({ bg: n.bg, color: n.color });
+                      setOpen();
+                    }}
+                    to={n.path}
+                    key={n.name + i}
+                    className={`px-[16px] py-[8px] uppercase`}
+                  >
+                    {n.name}
+                  </Link>
+                </>
+              );
+            })}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 });
