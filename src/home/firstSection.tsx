@@ -5,11 +5,11 @@ const FirstSection = () => {
     <section className="w-full px-[60px] bg-black pt-[84px] pb-[112px]">
       <div className="max-w-[1280px] mx-auto">
         <div className="w-[90%]">
-          <h1 className="uppercase text-[10rem] font-Thunder leading-[1.1] mt-[20px] mb-[10px]">
+          <h1 className="uppercase text-[10rem] mlg:text-[7rem] font-Thunder leading-[1.1] mt-[20px] mb-[10px]">
             i'm John smith{" "}
             <span className="inline-block">
               <img src="./header.webp" />
-            </span>
+            </span>{" "}
             product designer & web{" "}
             <span className="inline-block">
               <img src="./headerstar.webp" />

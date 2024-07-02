@@ -86,7 +86,7 @@ const Project = ({ item }: Iitem) => {
           <div className="w-[48px] aspect-square flex justify-center items-center bg-black rounded-full">
             <img
               className="w-[24px] aspect-square "
-              src="https://cdn.prod.website-files.com/6669563d598cbb2a4f78544f/6669563d598cbb2a4f7854f2_Arrow.svg"
+              src="./arrowTopRight.svg"
             />
           </div>
         </div>

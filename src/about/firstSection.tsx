@@ -5,7 +5,7 @@ const FirstSection = () => {
     <section className="w-full px-[60px] bg-gray2 text-black pb-[60px] ">
       <div className="max-w-[1280px] mx-auto py-[2rem]">
         <div className="flex flex-col justify-start text-center items-center">
-          <h1 className="uppercase font-Thunder text-[10rem] leading-[1.1] font-semibold pb-[16px] mt-[20px] mb-[10px] ">
+          <h1 className="uppercase font-Thunder text-[10rem] mlg:text-[7rem] leading-[1.1] font-semibold pb-[16px] mt-[20px] mb-[10px] ">
             bringing{" "}
             <span className="inline-block">
               <img src="./header.webp" />

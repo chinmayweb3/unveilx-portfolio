@@ -79,11 +79,17 @@ const Blog = () => (
   </>
 );
 
-const Card = ({ move, item }: { move: number; item: Record<any, string> }) => {
+const ReviewCard = ({
+  move,
+  item,
+}: {
+  move: number;
+  item: Record<any, string>;
+}) => {
   return (
     <div
       style={{ transform: `translateX(-${move * (440 + 24)}px)` }}
-      className={`shrink-0 w-[440px] duration-700 relative bg-gray3 mr-[24px] inline-block border-[2px] border-[#424242] rounded-[12px] `}
+      className={`shrink-0 mlg:w-[400px] w-[440px] duration-700 relative bg-gray3 mr-[24px] inline-block border-[2px] border-[#424242] rounded-[12px] `}
     >
       <div className=" p-[2rem]">
         <img className="aspect-square w-[96px] mb-[20px] " src={item.img} />
@@ -148,7 +154,7 @@ const FifthSection = () => {
           <h2 className="font-Thunder text-[5rem] font-semibold uppercase ">
             what they think
           </h2>
-          <div className="flex items-center gap-[10px] mt-[20px]">
+          <div className="flex items-center gap-[10px] mt-[20px] mlg:hidden">
             <button
               onClick={() => setCard((prev) => (prev == 0 ? prev : prev - 1))}
               className={` flex justify-center items-center w-[40px] aspect-square ${
@@ -170,9 +176,9 @@ const FifthSection = () => {
           </div>
         </div>
 
-        <div className="mt-[60px] flex justify-start flex-nowrap ">
+        <div className="mt-[60px] flex justify-start flex-nowrap mlg:overflow-x-scroll ">
           {info.map((i, index) => (
-            <Card key={i.name + index} item={i} move={card} />
+            <ReviewCard key={i.name + index} item={i} move={card} />
           ))}
         </div>
         <div className="py-[112px] ">

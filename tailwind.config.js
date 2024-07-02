@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      screens: {
+        mlg: { max: "1024px" },
+      },
       colors: {
         black: "var(--black)",
         white: "var(--white)",
