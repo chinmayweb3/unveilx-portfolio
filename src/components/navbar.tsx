@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { CiMenuBurger } from 'react-icons/ci';
 import { IoIosMenu } from 'react-icons/io';
+import { useCycle } from 'framer-motion';
 
 const navList = [
   { name: 'Home', path: '/', color: 'white', bg: 'black' },
@@ -49,12 +49,21 @@ const Navbar = () => {
             )
           )}
         </nav>
-        <nav className="hidden aspect-square place-content-center msm:grid">
-          <IoIosMenu className="h-[2rem] w-[2rem]" />
-        </nav>
+        <Mobile />
       </header>
     </div>
   );
 };
 
 export default Navbar;
+
+const Mobile = React.memo(() => {
+  const [open, setOpen] = useCycle(false, true);
+  return (
+    <>
+      <nav className="hidden aspect-square place-content-center msm:grid">
+        <IoIosMenu className="h-[2rem] w-[2rem]" />
+      </nav>
+    </>
+  );
+});
