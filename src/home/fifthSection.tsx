@@ -5,27 +5,32 @@ const info = [
   {
     name: "Shahin Alam",
     subTitle: "CEO, SamirTS",
-    img: "https://cdn.prod.website-files.com/6669563d598cbb2a4f78544f/6669563d598cbb2a4f7854c2_Person%2004.webp",
+    img: "./review1.webp",
   },
   {
     name: "Shahin Alam",
     subTitle: "CEO, SamirTS",
-    img: "https://cdn.prod.website-files.com/6669563d598cbb2a4f78544f/6669563d598cbb2a4f7854c4_Person%2002.webp",
+    img: "./review2.webp",
   },
   {
     name: "Shahin Alam",
     subTitle: "CEO, SamirTS",
-    img: "https://cdn.prod.website-files.com/6669563d598cbb2a4f78544f/6669563d598cbb2a4f7854c0_Person%2001.webp",
+    img: "./review3.webp",
   },
   {
     name: "Shahin Alam",
     subTitle: "CEO, SamirTS",
-    img: "https://cdn.prod.website-files.com/6669563d598cbb2a4f78544f/6669563d598cbb2a4f7854c3_Person%2003.webp",
+    img: "./review4.webp",
   },
   {
     name: "Shahin Alam",
     subTitle: "CEO, SamirTS",
-    img: "https://cdn.prod.website-files.com/6669563d598cbb2a4f78544f/6669563d598cbb2a4f7854c1_Person%2006.webp",
+    img: "./review5.webp",
+  },
+  {
+    name: "Shahin Alam",
+    subTitle: "CEO, SamirTS",
+    img: "./review6.webp",
   },
 ];
 
@@ -48,12 +53,12 @@ const blogInfo = [
 ];
 
 const marqueeInfo = [
-  "https://cdn.prod.website-files.com/6669563d598cbb2a4f78544f/6669563d598cbb2a4f7854dc_Logo%201.svg",
-  "https://cdn.prod.website-files.com/6669563d598cbb2a4f78544f/6669563d598cbb2a4f7854dd_Logo%202.svg",
-  "https://cdn.prod.website-files.com/6669563d598cbb2a4f78544f/6669563d598cbb2a4f7854de_Logo%203.svg",
-  "https://cdn.prod.website-files.com/6669563d598cbb2a4f78544f/6669563d598cbb2a4f7854db_Logo%204.svg",
-  "https://cdn.prod.website-files.com/6669563d598cbb2a4f78544f/6669563d598cbb2a4f7854df_Logo%205.svg",
-  "https://cdn.prod.website-files.com/65de23aa76e08c7eaf412465/65de23aa76e08c7eaf4124b8_Logo%2001.png",
+  "./logo1.svg",
+  "./logo2.svg",
+  "./logo3.svg",
+  "./logo4.svg",
+  "./logo5.svg",
+  "./logo6.svg",
 ];
 
 const Blog = () => (
@@ -150,10 +155,7 @@ const FifthSection = () => {
                 card == 0 ? "opacity-[0.48] cursor-default " : ""
               }`}
             >
-              <img
-                loading="lazy"
-                src="https://cdn.prod.website-files.com/6669563d598cbb2a4f78544f/6669563d598cbb2a4f7854d8_Arrow-Left.svg"
-              />
+              <img loading="lazy" src="./arrowLeft.svg" />
             </button>
             <button
               onClick={() =>
@@ -163,10 +165,7 @@ const FifthSection = () => {
                 card == info.length - 3 ? "opacity-[0.48] cursor-default" : ""
               }`}
             >
-              <img
-                loading="lazy"
-                src="https://cdn.prod.website-files.com/6669563d598cbb2a4f78544f/6669563d598cbb2a4f7854d9_Arrow-Right.svg"
-              />
+              <img loading="lazy" src="./arrowRight.svg" />
             </button>
           </div>
         </div>

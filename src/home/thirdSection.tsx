@@ -4,22 +4,22 @@ const info = [
   {
     title: "Heath care",
     para: "624 x 468",
-    src: "https://cdn.prod.website-files.com/6669563d598cbb2a4f785473/6669563d598cbb2a4f78547c_2.webp",
+    src: "./project1.webp",
   },
   {
     title: "cashsend app",
     para: "App Design",
-    src: "https://cdn.prod.website-files.com/6669563d598cbb2a4f785473/6669563d598cbb2a4f7854d2_01.webp",
+    src: "./project2.webp",
   },
   {
     title: "saas app",
     para: "Web Design",
-    src: "https://cdn.prod.website-files.com/6669563d598cbb2a4f785473/6669563d598cbb2a4f7854f0_3.webp",
+    src: "./project3.webp",
   },
   {
     title: "fintech web",
     para: "Web App Design",
-    src: "https://cdn.prod.website-files.com/6669563d598cbb2a4f785473/6669563d598cbb2a4f7854f1_4.webp",
+    src: "./project4.webp",
   },
 ];
 type Iitem = {

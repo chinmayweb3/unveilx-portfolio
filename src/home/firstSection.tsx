@@ -8,11 +8,11 @@ const FirstSection = () => {
           <h1 className="uppercase text-[10rem] font-Thunder leading-[1.1] mt-[20px] mb-[10px]">
             i'm John smith{" "}
             <span className="inline-block">
-              <img src="https://cdn.prod.website-files.com/6669563d598cbb2a4f78544f/66696af6a50568a7a530e85d_Hero%20Photo.webp" />
+              <img src="./header.webp" />
             </span>
             product designer & web{" "}
             <span className="inline-block">
-              <img src="https://cdn.prod.website-files.com/6669563d598cbb2a4f78544f/666974f67268f5a0e6285975_Hero%20Icon.webp" />
+              <img src="./headerstar.webp" />
             </span>{" "}
             developer
           </h1>
