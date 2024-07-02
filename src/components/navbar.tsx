@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { CiMenuBurger } from 'react-icons/ci';
+import { IoIosMenu } from 'react-icons/io';
 
 const navList = [
   { name: 'Home', path: '/', color: 'white', bg: 'black' },
@@ -46,6 +48,9 @@ const Navbar = () => {
               </Link>
             )
           )}
+        </nav>
+        <nav className="hidden aspect-square place-content-center msm:grid">
+          <IoIosMenu className="h-[2rem] w-[2rem]" />
         </nav>
       </header>
     </div>
