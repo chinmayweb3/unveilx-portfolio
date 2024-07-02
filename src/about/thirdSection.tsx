@@ -30,10 +30,10 @@ const ThirdSection = () => {
             </p>
             <p className="mb-[1.5rem] text-[1rem] leading-[1.5em]">My work history</p>
 
-            {info.map((n) => (
+            {info.map((n, i) => (
               <div
                 key={n.title}
-                className="flex items-center justify-between border-b border-t msm:flex-col msm:items-start msm:gap-0"
+                className={`flex items-center justify-between border-b msm:flex-col msm:items-start msm:gap-0 ${i == 0 ? 'border-t' : ''}`}
               >
                 <div className="my-[32px] flex items-center gap-[7rem] msm:mb-[10px]">
                   <p className="text-[1rem] leading-[1.7em]">{n.date}</p>
