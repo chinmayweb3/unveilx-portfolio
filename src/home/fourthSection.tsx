@@ -1,67 +1,54 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React from 'react';
+import { motion } from 'framer-motion';
 
-const info = [
-  "UI / UX design",
-  "web design",
-  "webflow development",
-  "product design",
-];
+const info = ['UI / UX design', 'web design', 'webflow development', 'product design'];
 
 const Accord = ({ title, index }: { title: string; index: number }) => {
-  const [open, setOpen] = React.useState<"opened" | "closed">("closed");
+  const [open, setOpen] = React.useState<'opened' | 'closed'>('closed');
   return (
     <div
-      onClick={() =>
-        setOpen((prev) => (prev == "closed" ? "opened" : "closed"))
-      }
-      className={`${info.length == index ? "border-b-[1px] border-black" : ""}`}
+      onClick={() => setOpen((prev) => (prev == 'closed' ? 'opened' : 'closed'))}
+      className={`${info.length == index ? 'border-b-[1px] border-black' : ''}`}
     >
-      <div className="border-black border-t-[1px] py-[32px] grid grid-cols-[calc(32px+10rem)_2fr_1fr] items-center cursor-pointer ">
+      <div className="grid cursor-pointer grid-cols-[calc(32px+10rem)_2fr_1fr] items-center border-t-[1px] border-black py-[32px]">
         <div>
           <motion.img
             animate={open}
             variants={{
-              opened: { rotate: "45deg" },
-              closed: { rotate: "0deg" },
+              opened: { rotate: '45deg' },
+              closed: { rotate: '0deg' },
             }}
             className="w-[2rem]"
-            src="https://cdn.prod.website-files.com/6669563d598cbb2a4f78544f/66698faccd01b5e8778c2e38_plus.svg"
+            src="./plus.svg"
           />
         </div>
-        <div className="uppercase font-inter text-[2.2rem] font-semibold leading-[1.5] ">
-          {title}
-        </div>
-        <div className="text-[1.5rem] justify-self-end ">[0{index}]</div>
+        <div className="font-inter text-[2.2rem] font-semibold uppercase leading-[1.5]">{title}</div>
+        <div className="justify-self-end text-[1.5rem]">[0{index}]</div>
       </div>
 
       <motion.div
         animate={open}
         initial={{ height: 0 }}
-        variants={{ opened: { height: "auto" }, closed: { height: 0 } }}
-        transition={{ bounce: 0.25, type: "spring" }}
+        variants={{ opened: { height: 'auto' }, closed: { height: 0 } }}
+        transition={{ bounce: 0.25, type: 'spring' }}
         className="overflow-hidden"
       >
-        <div className="py-[40px] flex gap-[7.1rem]  pr-[176px] ">
-          <div className="uppercase text-[1rem] ">Overview</div>
+        <div className="flex gap-[7.1rem] py-[40px] pr-[176px]">
+          <div className="text-[1rem] uppercase">Overview</div>
           <div>
-            <p className="leading-1.7rem] ">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique. Duis cursus,
-              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
-              libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum
-              lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
+            <p className="leading-1.7rem]">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis
+              cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh
+              et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
             </p>
-            <div className="mt-[1.8rem] flex gap-[10px] ">
-              <button className="text-[0.9rem] uppercase border border-black px-[10px] py-[6px] rounded-[100px] ">
+            <div className="mt-[1.8rem] flex gap-[10px]">
+              <button className="rounded-[100px] border border-black px-[10px] py-[6px] text-[0.9rem] uppercase">
                 webflow design
               </button>
-              <button className="text-[0.9rem] uppercase border border-black px-[10px] py-[6px] rounded-[100px] ">
+              <button className="rounded-[100px] border border-black px-[10px] py-[6px] text-[0.9rem] uppercase">
                 workpress
               </button>
-              <button className="text-[0.9rem] uppercase border border-black px-[10px] py-[6px] rounded-[100px] ">
-                framer
-              </button>
+              <button className="rounded-[100px] border border-black px-[10px] py-[6px] text-[0.9rem] uppercase">framer</button>
             </div>
           </div>
         </div>
@@ -72,13 +59,11 @@ const Accord = ({ title, index }: { title: string; index: number }) => {
 
 const FourthSection = () => {
   return (
-    <section className="w-full px-[60px] py-[112px] bg-lime-green text-black">
-      <div className="max-w-[1280px] mx-auto">
-        <div className="max-w-[768px] w-full mx-auto">
-          <div className="pb-[16px] mb-[24px]">
-            <h2 className="uppercase font-Thunder font-semibold mb-[32px] text-[5rem] inline-block ">
-              my skill & service
-            </h2>
+    <section className="w-full bg-lime-green px-[60px] py-[112px] text-black">
+      <div className="mx-auto max-w-[1280px]">
+        <div className="mx-auto w-full max-w-[768px]">
+          <div className="mb-[24px] pb-[16px]">
+            <h2 className="mb-[32px] inline-block font-Thunder text-[5rem] font-semibold uppercase">my skill & service</h2>
           </div>
           <div>
             {info.map((item, index) => (
