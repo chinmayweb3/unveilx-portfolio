@@ -59,7 +59,7 @@ const Accord = ({ title, index }: { title: string; index: number }) => {
 
 const FourthSection = () => {
   return (
-    <section className="w-full bg-lime-green px-[60px] py-[112px] text-black msm:px-[6%]">
+    <section className="w-full bg-lime-green px-[60px] py-[112px] text-black msm:px-[6%] msm:py-[4rem]">
       <div className="mx-auto max-w-[1280px]">
         <div className="mx-auto w-full max-w-[768px]">
           <div className="mb-[24px] pb-[16px]">

@@ -20,7 +20,7 @@ const Navbar = () => {
 
   return (
     <div className={`w-full px-[60px] msm:px-[6%] bg-${css.bg} text-${css.color}`}>
-      <header className="mx-auto flex h-[91px] max-w-[1280px] items-center justify-between">
+      <header className="mx-auto flex h-[91px] max-w-[1280px] items-center justify-between msm:h-[80px]">
         <Link onClick={() => setcss({ bg: 'black', color: 'white' })} to={'/'}>
           <svg className="w-[104px]" width="143" height="25" viewBox="0 0 143 25" fill="none">
             <path

@@ -90,18 +90,18 @@ const ThirdSection = () => {
   return (
     <section className="w-full bg-white px-[60px] py-[112px] text-black msm:px-[6%]">
       <div className="mx-auto max-w-[1280px]">
-        <div className="flex justify-between msm:flex-col">
-          <div className="w-[48rem]">
+        <div className="imte flex justify-between gap-[18px] msm:flex-col">
+          <div className="w-[48rem] msm:w-fit">
             <div className="pb-[8px] text-[1rem] uppercase">Projects</div>
             <h2 className="font-Thunder text-[5rem] font-semibold uppercase leading-[1.1] msm:text-[2.85rem]">
               Helping brands achieve sustainable results
             </h2>
           </div>
-          <button className="mb-[20px] flex items-center justify-center gap-[32px] self-end border-b-[1px] border-black pb-[10px] text-[1.15rem]">
+          <button className="mb-[20px] flex items-center justify-center gap-[32px] self-end border-b-[1px] border-black pb-[10px] text-[1.15rem] msm:self-start">
             <span>View All Project</span> <span>↗︎</span>
           </button>
         </div>
-        <div className="mt-[56px]">
+        <div className="mt-[56px] msm:mt-[2rem]">
           <div className="grid grid-cols-2 gap-x-[2rem] gap-y-[2.2rem] msm:grid-cols-1">
             {info.map((i) => (
               <Project key={i.title} item={i} />
