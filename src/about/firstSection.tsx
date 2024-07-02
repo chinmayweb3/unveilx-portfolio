@@ -8,7 +8,7 @@ const FirstSection = () => {
           <h1 className="uppercase font-Thunder text-[10rem] leading-[1.1] font-semibold pb-[16px] mt-[20px] mb-[10px] ">
             bringing{" "}
             <span className="inline-block">
-              <img src="https://cdn.prod.website-files.com/6669563d598cbb2a4f78544f/66696af6a50568a7a530e85d_Hero%20Photo.webp" />
+              <img src="./header.webp" />
             </span>{" "}
             best design solutions
           </h1>
