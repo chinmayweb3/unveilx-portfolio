@@ -74,19 +74,19 @@ const ReviewCard = ({ move, item }: { move: number; item: Record<any, string> })
   return (
     <div
       style={{ transform: `translateX(-${move * (440 + 24)}px)` }}
-      className={`relative mr-[24px] inline-block w-[440px] shrink-0 rounded-[12px] border-[2px] border-[#424242] bg-gray3 duration-700 mlg:w-[400px]`}
+      className={`relative mr-[24px] inline-block w-[440px] shrink-0 rounded-[12px] border-[2px] border-[#424242] bg-gray3 duration-700 mlg:w-[400px] msm:mr-[16px] msm:w-[300px]`}
     >
-      <div className="p-[2rem]">
-        <img className="mb-[20px] aspect-square w-[96px]" src={item.img} />
+      <div className="p-[2rem] msm:p-[1.5rem]">
+        <img className="mb-[20px] aspect-square w-[96px] msm:w-[72px]" src={item.img} />
 
         <div className="mb-[24px]">
-          <p className="text-[1.125rem] leading-[1.7em]">
+          <p className="text-[1.125rem] leading-[1.7em] msm:text-[0.8rem]">
             "Working with John was effortless. His quick responses and deep comprehension of our objectives made the experience
             delightful. He's truly a valuable ally in our digital endeavors."
           </p>
         </div>
-        <div className="mb-[0.5rem] text-[1.25rem] font-semibold">{item.name}</div>
-        <div className="text-[1rem] text-gray1">{item.subTitle}</div>
+        <div className="mb-[0.5rem] text-[1.25rem] font-semibold msm:text-[1rem]">{item.name}</div>
+        <div className="text-[1rem] text-gray1 msm:text-[0.9rem]">{item.subTitle}</div>
       </div>
     </div>
   );

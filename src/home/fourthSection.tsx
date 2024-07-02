@@ -33,7 +33,7 @@ const Accord = ({ title, index }: { title: string; index: number }) => {
         transition={{ bounce: 0.25, type: 'spring' }}
         className="overflow-hidden"
       >
-        <div className="flex gap-[7.1rem] py-[40px] pr-[176px] msm:flex-col msm:gap-[2rem] msm:pr-[0]">
+        <div className="flex gap-[7.1rem] py-[40px] pr-[176px] msm:flex-col msm:gap-[2rem] msm:pr-[0] msm:pt-[20px]">
           <div className="text-[1rem] uppercase">Overview</div>
           <div>
             <p className="leading-1.7rem]">
