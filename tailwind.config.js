@@ -5,6 +5,7 @@ export default {
     extend: {
       screens: {
         mlg: { max: "1024px" },
+        msm: { max: "500px" },
       },
       colors: {
         black: "var(--black)",

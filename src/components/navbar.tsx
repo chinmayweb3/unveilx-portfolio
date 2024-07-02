@@ -35,7 +35,7 @@ const Navbar = () => {
             />
           </svg>
         </Link>
-        <nav className="flex items-center">
+        <nav className="msm:hidden flex items-center">
           {navList.map((n, i) =>
             !n.path ? (
               <button
