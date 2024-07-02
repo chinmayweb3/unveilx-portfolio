@@ -10,7 +10,7 @@ const Accord = ({ title, index }: { title: string; index: number }) => {
       onClick={() => setOpen((prev) => (prev == 'closed' ? 'opened' : 'closed'))}
       className={`${info.length == index ? 'border-b-[1px] border-black' : ''}`}
     >
-      <div className="grid cursor-pointer grid-cols-[calc(32px+10rem)_2fr_1fr] items-center border-t-[1px] border-black py-[32px] msm:grid-cols-2">
+      <div className="grid cursor-pointer grid-cols-[calc(32px+10rem)_2fr_1fr] items-center border-t-[1px] border-black py-[32px] msm:grid-cols-[1.5fr_60px] msm:py-[26px]">
         <div className="msm:hidden">
           <motion.img
             animate={open}
@@ -22,8 +22,8 @@ const Accord = ({ title, index }: { title: string; index: number }) => {
             src="./plus.svg"
           />
         </div>
-        <div className="font-inter text-[2.2rem] font-semibold uppercase leading-[1.5] msm:text-[1.25rem]">{title}</div>
-        <div className="justify-self-end text-[1.5rem]">[0{index}]</div>
+        <div className="font-inter text-[2.2rem] font-semibold uppercase leading-[1.5] msm:text-[20px]">{title}</div>
+        <div className="justify-self-end text-[1.5rem] msm:pr-[10px] msm:text-[1.15rem]">[0{index}]</div>
       </div>
 
       <motion.div
@@ -33,7 +33,7 @@ const Accord = ({ title, index }: { title: string; index: number }) => {
         transition={{ bounce: 0.25, type: 'spring' }}
         className="overflow-hidden"
       >
-        <div className="flex gap-[7.1rem] py-[40px] pr-[176px]">
+        <div className="flex gap-[7.1rem] py-[40px] pr-[176px] msm:flex-col msm:gap-[2rem] msm:pr-[0]">
           <div className="text-[1rem] uppercase">Overview</div>
           <div>
             <p className="leading-1.7rem]">
