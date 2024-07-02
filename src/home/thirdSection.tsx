@@ -88,12 +88,12 @@ const Project = ({ item }: Iitem) => {
 
 const ThirdSection = () => {
   return (
-    <section className="w-full bg-white px-[60px] py-[112px] text-black">
+    <section className="w-full bg-white px-[60px] py-[112px] text-black msm:px-[6%]">
       <div className="mx-auto max-w-[1280px]">
-        <div className="flex justify-between">
+        <div className="flex justify-between msm:flex-col">
           <div className="w-[48rem]">
             <div className="pb-[8px] text-[1rem] uppercase">Projects</div>
-            <h2 className="font-Thunder text-[5rem] font-semibold uppercase leading-[1.1]">
+            <h2 className="font-Thunder text-[5rem] font-semibold uppercase leading-[1.1] msm:text-[2.85rem]">
               Helping brands achieve sustainable results
             </h2>
           </div>
@@ -102,7 +102,7 @@ const ThirdSection = () => {
           </button>
         </div>
         <div className="mt-[56px]">
-          <div className="grid grid-cols-2 gap-x-[2rem] gap-y-[2.2rem]">
+          <div className="grid grid-cols-2 gap-x-[2rem] gap-y-[2.2rem] msm:grid-cols-1">
             {info.map((i) => (
               <Project key={i.title} item={i} />
             ))}

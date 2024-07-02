@@ -10,8 +10,8 @@ const Accord = ({ title, index }: { title: string; index: number }) => {
       onClick={() => setOpen((prev) => (prev == 'closed' ? 'opened' : 'closed'))}
       className={`${info.length == index ? 'border-b-[1px] border-black' : ''}`}
     >
-      <div className="grid cursor-pointer grid-cols-[calc(32px+10rem)_2fr_1fr] items-center border-t-[1px] border-black py-[32px]">
-        <div>
+      <div className="grid cursor-pointer grid-cols-[calc(32px+10rem)_2fr_1fr] items-center border-t-[1px] border-black py-[32px] msm:grid-cols-2">
+        <div className="msm:hidden">
           <motion.img
             animate={open}
             variants={{
@@ -22,7 +22,7 @@ const Accord = ({ title, index }: { title: string; index: number }) => {
             src="./plus.svg"
           />
         </div>
-        <div className="font-inter text-[2.2rem] font-semibold uppercase leading-[1.5]">{title}</div>
+        <div className="font-inter text-[2.2rem] font-semibold uppercase leading-[1.5] msm:text-[1.25rem]">{title}</div>
         <div className="justify-self-end text-[1.5rem]">[0{index}]</div>
       </div>
 
@@ -59,11 +59,13 @@ const Accord = ({ title, index }: { title: string; index: number }) => {
 
 const FourthSection = () => {
   return (
-    <section className="w-full bg-lime-green px-[60px] py-[112px] text-black">
+    <section className="w-full bg-lime-green px-[60px] py-[112px] text-black msm:px-[6%]">
       <div className="mx-auto max-w-[1280px]">
         <div className="mx-auto w-full max-w-[768px]">
           <div className="mb-[24px] pb-[16px]">
-            <h2 className="mb-[32px] inline-block font-Thunder text-[5rem] font-semibold uppercase">my skill & service</h2>
+            <h2 className="mb-[32px] inline-block font-Thunder text-[5rem] font-semibold uppercase msm:text-[2.85rem]">
+              my skill & service
+            </h2>
           </div>
           <div>
             {info.map((item, index) => (

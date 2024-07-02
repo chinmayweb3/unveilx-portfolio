@@ -1,110 +1,92 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React from 'react';
+import { motion } from 'framer-motion';
 
 const info = [
   {
-    name: "Shahin Alam",
-    subTitle: "CEO, SamirTS",
-    img: "./review1.webp",
+    name: 'Shahin Alam',
+    subTitle: 'CEO, SamirTS',
+    img: './review1.webp',
   },
   {
-    name: "Shahin Alam",
-    subTitle: "CEO, SamirTS",
-    img: "./review2.webp",
+    name: 'Shahin Alam',
+    subTitle: 'CEO, SamirTS',
+    img: './review2.webp',
   },
   {
-    name: "Shahin Alam",
-    subTitle: "CEO, SamirTS",
-    img: "./review3.webp",
+    name: 'Shahin Alam',
+    subTitle: 'CEO, SamirTS',
+    img: './review3.webp',
   },
   {
-    name: "Shahin Alam",
-    subTitle: "CEO, SamirTS",
-    img: "./review4.webp",
+    name: 'Shahin Alam',
+    subTitle: 'CEO, SamirTS',
+    img: './review4.webp',
   },
   {
-    name: "Shahin Alam",
-    subTitle: "CEO, SamirTS",
-    img: "./review5.webp",
+    name: 'Shahin Alam',
+    subTitle: 'CEO, SamirTS',
+    img: './review5.webp',
   },
   {
-    name: "Shahin Alam",
-    subTitle: "CEO, SamirTS",
-    img: "./review6.webp",
+    name: 'Shahin Alam',
+    subTitle: 'CEO, SamirTS',
+    img: './review6.webp',
   },
 ];
 
 const blogInfo = [
   {
-    title: "Design",
-    para: "10 Tips for Elevating Your Design Game",
-    date: "June 27, 2023",
+    title: 'Design',
+    para: '10 Tips for Elevating Your Design Game',
+    date: 'June 27, 2023',
   },
   {
-    title: "Fintech",
-    para: "10 Tips for Elevating Your Design Game",
-    date: "June 27, 2023",
+    title: 'Fintech',
+    para: '10 Tips for Elevating Your Design Game',
+    date: 'June 27, 2023',
   },
   {
-    title: "Fintech",
-    para: "10 Tips for Elevating Your Design Game",
-    date: "June 27, 2023",
+    title: 'Fintech',
+    para: '10 Tips for Elevating Your Design Game',
+    date: 'June 27, 2023',
   },
 ];
 
-const marqueeInfo = [
-  "./logo1.svg",
-  "./logo2.svg",
-  "./logo3.svg",
-  "./logo4.svg",
-  "./logo5.svg",
-  "./logo6.svg",
-];
+const marqueeInfo = ['./logo1.svg', './logo2.svg', './logo3.svg', './logo4.svg', './logo5.svg', './logo6.svg'];
 
 const Blog = () => (
   <>
     {blogInfo.map((t, i) => {
       return (
-        <div key={t.title + i} className="flex flex-col gap-[4px] ">
-          <button className="w-fit text-[0.82rem] border-[0.5px] border-white rounded-[2rem] py-[4px] px-[10px] mb-[0.5rem] ">
+        <div key={t.title + i} className="flex flex-col gap-[4px]">
+          <button className="mb-[0.5rem] w-fit rounded-[2rem] border-[0.5px] border-white px-[10px] py-[4px] text-[0.82rem]">
             {t.title}
           </button>
-          <h3 className="text-[2.75rem] font-medium font-Thunder leading-[1] ">
-            {t.para}
-          </h3>
-          <p className="text-gray1 text-[1rem] ">{t.date}</p>
+          <h3 className="font-Thunder text-[2.75rem] font-medium leading-[1]">{t.para}</h3>
+          <p className="text-[1rem] text-gray1">{t.date}</p>
         </div>
       );
     })}
   </>
 );
 
-const ReviewCard = ({
-  move,
-  item,
-}: {
-  move: number;
-  item: Record<any, string>;
-}) => {
+const ReviewCard = ({ move, item }: { move: number; item: Record<any, string> }) => {
   return (
     <div
       style={{ transform: `translateX(-${move * (440 + 24)}px)` }}
-      className={`shrink-0 mlg:w-[400px] w-[440px] duration-700 relative bg-gray3 mr-[24px] inline-block border-[2px] border-[#424242] rounded-[12px] `}
+      className={`relative mr-[24px] inline-block w-[440px] shrink-0 rounded-[12px] border-[2px] border-[#424242] bg-gray3 duration-700 mlg:w-[400px]`}
     >
-      <div className=" p-[2rem]">
-        <img className="aspect-square w-[96px] mb-[20px] " src={item.img} />
+      <div className="p-[2rem]">
+        <img className="mb-[20px] aspect-square w-[96px]" src={item.img} />
 
         <div className="mb-[24px]">
-          <p className="text-[1.125rem] leading-[1.7em]  ">
-            "Working with John was effortless. His quick responses and deep
-            comprehension of our objectives made the experience delightful. He's
-            truly a valuable ally in our digital endeavors."
+          <p className="text-[1.125rem] leading-[1.7em]">
+            "Working with John was effortless. His quick responses and deep comprehension of our objectives made the experience
+            delightful. He's truly a valuable ally in our digital endeavors."
           </p>
         </div>
-        <div className="text-[1.25rem] mb-[0.5rem] font-semibold">
-          {item.name}
-        </div>
-        <div className="text-[1rem] text-gray1 ">{item.subTitle}</div>
+        <div className="mb-[0.5rem] text-[1.25rem] font-semibold">{item.name}</div>
+        <div className="text-[1rem] text-gray1">{item.subTitle}</div>
       </div>
     </div>
   );
@@ -115,26 +97,26 @@ const Marquee = () => {
     <div className="overflow-hidden">
       <motion.div
         animate={{
-          x: "-50%",
+          x: '-50%',
         }}
         transition={{
           repeat: Infinity,
-          repeatType: "loop",
+          repeatType: 'loop',
           duration: 15,
-          ease: "linear",
+          ease: 'linear',
         }}
-        className="flex items-center min-w-max"
+        className="flex min-w-max items-center"
       >
         {marqueeInfo.map((n, i) => {
           return (
-            <div className="shrink-0 mr-[80px] " key={"marquee" + i}>
+            <div className="mr-[80px] shrink-0 msm:mr-[60px]" key={'marquee' + i}>
               <img loading="lazy" src={n} alt="logo images" />
             </div>
           );
         })}
         {marqueeInfo.map((n, i) => {
           return (
-            <div className="shrink-0 mr-[80px] " key={"marquee2" + i}>
+            <div className="mr-[80px] shrink-0 msm:mr-[60px]" key={'marquee2' + i}>
               <img loading="lazy" src={n} alt="logo images" />
             </div>
           );
@@ -148,27 +130,23 @@ const FifthSection = () => {
   const [card, setCard] = React.useState(0);
 
   return (
-    <section className="w-full px-[60px] py-[112px] bg-black text-white overflow-hidden">
-      <div className="max-w-[1280px] mx-auto">
-        <div className="flex justify-between items-start">
-          <h2 className="font-Thunder text-[5rem] font-semibold uppercase ">
-            what they think
-          </h2>
-          <div className="flex items-center gap-[10px] mt-[20px] mlg:hidden">
+    <section className="w-full overflow-hidden bg-black px-[60px] py-[112px] text-white msm:px-[6%]">
+      <div className="mx-auto max-w-[1280px]">
+        <div className="flex items-start justify-between">
+          <h2 className="font-Thunder text-[5rem] font-semibold uppercase msm:text-[2.85rem]">what they think</h2>
+          <div className="mt-[20px] flex items-center gap-[10px] mlg:hidden">
             <button
               onClick={() => setCard((prev) => (prev == 0 ? prev : prev - 1))}
-              className={` flex justify-center items-center w-[40px] aspect-square ${
-                card == 0 ? "opacity-[0.48] cursor-default " : ""
+              className={`flex aspect-square w-[40px] items-center justify-center ${
+                card == 0 ? 'cursor-default opacity-[0.48]' : ''
               }`}
             >
               <img loading="lazy" src="./arrowLeft.svg" />
             </button>
             <button
-              onClick={() =>
-                setCard((prev) => (prev == info.length - 3 ? prev : prev + 1))
-              }
-              className={`flex justify-center items-center w-[40px] aspect-square ${
-                card == info.length - 3 ? "opacity-[0.48] cursor-default" : ""
+              onClick={() => setCard((prev) => (prev == info.length - 3 ? prev : prev + 1))}
+              className={`flex aspect-square w-[40px] items-center justify-center ${
+                card == info.length - 3 ? 'cursor-default opacity-[0.48]' : ''
               }`}
             >
               <img loading="lazy" src="./arrowRight.svg" />
@@ -176,19 +154,17 @@ const FifthSection = () => {
           </div>
         </div>
 
-        <div className="mt-[60px] flex justify-start flex-nowrap mlg:overflow-x-scroll ">
+        <div className="mt-[60px] flex flex-nowrap justify-start mlg:overflow-x-scroll">
           {info.map((i, index) => (
             <ReviewCard key={i.name + index} item={i} move={card} />
           ))}
         </div>
-        <div className="py-[112px] ">
+        <div className="py-[112px]">
           <Marquee />
         </div>
         <div>
-          <h2 className="font-Thunder text-[5rem] font-semibold uppercase mb-[3.15rem] ">
-            latest from blog
-          </h2>
-          <div className="grid grid-cols-3 gap-x-[32px] ">
+          <h2 className="mb-[3.15rem] font-Thunder text-[5rem] font-semibold uppercase msm:text-[2.85rem]">latest from blog</h2>
+          <div className="grid grid-cols-3 gap-x-[32px] msm:grid-cols-1 msm:gap-[24px]">
             <Blog />
           </div>
         </div>
