@@ -1,9 +1,9 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { HTMLMotionProps, motion } from 'framer-motion';
 import { twMerge } from 'tailwind-merge';
 
 // type buttonProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
-type divProps = React.HTMLAttributes<HTMLDivElement> & {
+type divProps = HTMLMotionProps<'div'> & {
   sideRun?: 'x' | 'y' | '-x' | '-y';
   sidePx?: number;
 };
@@ -25,6 +25,7 @@ const Translation = React.forwardRef<HTMLDivElement, divProps>(({ sidePx = 100, 
       viewport={{ once: true }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
       className={twMerge('', props.className)}
+      {...props}
     >
       {props.children}
     </motion.div>
