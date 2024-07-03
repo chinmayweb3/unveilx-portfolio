@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Translation from '../components/translation';
 
 const info = [
   {
@@ -60,7 +61,7 @@ const ReviewCard = ({ move, item }: { move: number; item: Record<any, string> })
 
 const Marquee = () => {
   return (
-    <div className="overflow-hidden">
+    <Translation duration={1} sidePx={0} className="overflow-hidden">
       <motion.div
         animate={{
           x: '-50%',
@@ -88,7 +89,7 @@ const Marquee = () => {
           );
         })}
       </motion.div>
-    </div>
+    </Translation>
   );
 };
 
@@ -98,9 +99,11 @@ const FifthSection = () => {
   return (
     <section className="w-full overflow-hidden bg-black px-[60px] py-[112px] text-white msm:px-[6%] msm:py-[80px]">
       <div className="mx-auto max-w-[1280px]">
-        <div className="flex items-start justify-between">
-          <h2 className="font-Thunder text-[5rem] font-semibold uppercase msm:text-[2.85rem]">what they think</h2>
-          <div className="mt-[20px] flex items-center gap-[10px] mlg:hidden">
+        <div className="flex items-center justify-between">
+          <Translation>
+            <h2 className="font-Thunder text-[5rem] font-semibold uppercase leading-[1] msm:text-[2.85rem]">what they think</h2>
+          </Translation>
+          <Translation sideRun="-x" className="flex items-center gap-[10px] mlg:hidden">
             <button
               onClick={() => setCard((prev) => (prev == 0 ? prev : prev - 1))}
               className={`flex aspect-square w-[40px] items-center justify-center ${
@@ -117,14 +120,14 @@ const FifthSection = () => {
             >
               <img loading="lazy" src="./arrowRight.svg" />
             </button>
-          </div>
+          </Translation>
         </div>
 
-        <div className="mt-[60px] flex flex-nowrap justify-start pb-[10px] mlg:overflow-x-scroll">
+        <Translation sideRun="-x" className="mt-[60px] flex flex-nowrap justify-start pb-[10px] mlg:overflow-x-scroll">
           {info.map((i, index) => (
             <ReviewCard key={i.name + index} item={i} move={card} />
           ))}
-        </div>
+        </Translation>
         <div className="pt-[112px] msm:pt-[80px]">
           <Marquee />
         </div>
