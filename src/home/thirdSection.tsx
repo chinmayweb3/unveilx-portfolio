@@ -88,7 +88,7 @@ const Project = ({ item }: Iitem) => {
 
 const ThirdSection = () => {
   return (
-    <section className="w-full bg-white px-[60px] py-[112px] text-black msm:px-[6%]">
+    <section className="w-full bg-white px-[60px] py-[112px] text-black msm:px-[6%] msm:py-[4rem]">
       <div className="mx-auto max-w-[1280px]">
         <div className="imte flex justify-between gap-[18px] msm:flex-col">
           <div className="w-[48rem] msm:w-fit">

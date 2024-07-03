@@ -75,14 +75,14 @@ const Marquee = () => {
       >
         {marqueeInfo.map((n, i) => {
           return (
-            <div className="mr-[80px] shrink-0 msm:mr-[60px]" key={'marquee' + i}>
+            <div className="mr-[80px] shrink-0 msm:mr-[40px]" key={'marquee' + i}>
               <img loading="lazy" src={n} alt="logo images" />
             </div>
           );
         })}
         {marqueeInfo.map((n, i) => {
           return (
-            <div className="mr-[80px] shrink-0 msm:mr-[60px]" key={'marquee2' + i}>
+            <div className="mr-[80px] shrink-0 msm:mr-[40px]" key={'marquee2' + i}>
               <img loading="lazy" src={n} alt="logo images" />
             </div>
           );

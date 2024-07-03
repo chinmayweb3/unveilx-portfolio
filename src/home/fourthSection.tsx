@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { ButtonField } from '../components/buttons';
 
 const info = ['UI / UX design', 'web design', 'webflow development', 'product design'];
 
@@ -41,14 +42,10 @@ const Accord = ({ title, index }: { title: string; index: number }) => {
               cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh
               et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
             </p>
-            <div className="mt-[1.8rem] flex gap-[10px]">
-              <button className="rounded-[100px] border border-black px-[10px] py-[6px] text-[0.9rem] uppercase">
-                webflow design
-              </button>
-              <button className="rounded-[100px] border border-black px-[10px] py-[6px] text-[0.9rem] uppercase">
-                workpress
-              </button>
-              <button className="rounded-[100px] border border-black px-[10px] py-[6px] text-[0.9rem] uppercase">framer</button>
+            <div className="mt-[1.8rem] flex flex-wrap gap-[10px] border-black">
+              <ButtonField className="px-[10px]">webflow design</ButtonField>
+              <ButtonField className="px-[10px]">workpress</ButtonField>
+              <ButtonField className="px-[10px]">framer</ButtonField>
             </div>
           </div>
         </div>
