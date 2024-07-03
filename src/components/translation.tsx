@@ -2,7 +2,6 @@ import React from 'react';
 import { HTMLMotionProps, motion } from 'framer-motion';
 import { twMerge } from 'tailwind-merge';
 
-// type buttonProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
 type divProps = HTMLMotionProps<'div'> & {
   sideRun?: 'x' | 'y' | '-x' | '-y';
   sidePx?: number;
