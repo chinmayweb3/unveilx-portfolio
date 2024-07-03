@@ -6,16 +6,18 @@ import { twMerge } from 'tailwind-merge';
 type divProps = HTMLMotionProps<'div'> & {
   sideRun?: 'x' | 'y' | '-x' | '-y';
   sidePx?: number;
+  duration?: number | string;
 };
 
-const Translation = React.forwardRef<HTMLDivElement, divProps>(({ sidePx = 100, sideRun = 'x', ...props }, ref) => {
-  const position = sideRun.startsWith('-');
-  let side = position ? sideRun[1] : sideRun[0];
+const Translation = React.forwardRef<HTMLDivElement, divProps>(({ ...props }, ref) => {
+  if (!props.sideRun) props.sideRun = 'x';
+  const position = props.sideRun.startsWith('-');
+  let side = position ? props.sideRun[1] : props.sideRun[0];
   return (
     <motion.div
       ref={ref}
       initial={{
-        [side]: `${position ? '' : '-'}${sidePx}px`,
+        [side]: `${position ? '' : '-'}${props.sidePx ?? 100}px`,
         opacity: 0,
       }}
       whileInView={{
@@ -23,7 +25,7 @@ const Translation = React.forwardRef<HTMLDivElement, divProps>(({ sidePx = 100, 
         opacity: 1,
       }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5, ease: 'easeOut' }}
+      transition={{ duration: props.duration ?? 0.5, ease: 'easeOut' }}
       className={twMerge('', props.className)}
       {...props}
     >
