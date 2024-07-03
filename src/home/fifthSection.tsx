@@ -120,7 +120,7 @@ const FifthSection = () => {
           </div>
         </div>
 
-        <div className="mt-[60px] flex flex-nowrap justify-start mlg:overflow-x-scroll">
+        <div className="mt-[60px] flex flex-nowrap justify-start pb-[10px] mlg:overflow-x-scroll">
           {info.map((i, index) => (
             <ReviewCard key={i.name + index} item={i} move={card} />
           ))}
