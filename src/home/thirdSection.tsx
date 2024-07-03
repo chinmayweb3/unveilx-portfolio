@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import Translation from '../components/translation';
 
 const info = [
   {
@@ -36,7 +37,9 @@ const Project = ({ item }: Iitem) => {
   let time: ReturnType<typeof setTimeout>;
 
   return (
-    <div
+    <Translation
+      sideRun="-y"
+      sidePx={30}
       ref={parentRef}
       onMouseMove={(e) => {
         if (!parentRef.current || !playRef.current) return;
@@ -82,7 +85,7 @@ const Project = ({ item }: Iitem) => {
           </div>
         </div>
       </div>
-    </div>
+    </Translation>
   );
 };
 
