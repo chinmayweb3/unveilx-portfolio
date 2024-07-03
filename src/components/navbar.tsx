@@ -71,9 +71,10 @@ const Mobile = React.memo(({ css, setcss }: { css: any; setcss: any }) => {
             animate={{ y: 0 }}
             exit={{ y: '-100%' }}
             transition={{
-              duration: 0.2,
+              duration: 0.4,
+              ease: 'easeOut',
             }}
-            className={`absolute left-0 top-0 flex h-[100vh] w-full flex-col items-center justify-center gap-[30px] pb-[250px] text-[22px] bg-${css.bg} text-${css.color}`}
+            className={`absolute left-0 top-0 z-[1] flex h-[100vh] w-full flex-col items-center justify-center gap-[30px] pb-[5%] text-[22px] bg-${css.bg} saturate-[2] text-${css.color}`}
           >
             {navList.map((n, i) => {
               if (!n.path) {
