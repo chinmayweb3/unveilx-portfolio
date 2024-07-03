@@ -1,13 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ButtonField } from '../components/buttons';
+import Translation from '../components/translation';
 
 const info = ['UI / UX design', 'web design', 'webflow development', 'product design'];
 
 const Accord = ({ title, index }: { title: string; index: number }) => {
   const [open, setOpen] = React.useState<'opened' | 'closed'>('closed');
   return (
-    <div
+    <Translation
+      sideRun="-y"
+      duration={0.3}
       onClick={() => setOpen((prev) => (prev == 'closed' ? 'opened' : 'closed'))}
       className={`${info.length == index ? 'border-b-[1px] border-black' : ''}`}
     >
@@ -50,7 +53,7 @@ const Accord = ({ title, index }: { title: string; index: number }) => {
           </div>
         </div>
       </motion.div>
-    </div>
+    </Translation>
   );
 };
 
@@ -60,9 +63,11 @@ const FourthSection = () => {
       <div className="mx-auto max-w-[1280px]">
         <div className="mx-auto w-full max-w-[768px]">
           <div className="mb-[24px] pb-[16px]">
-            <h2 className="mb-[32px] inline-block font-Thunder text-[5rem] font-semibold uppercase msm:text-[2.85rem]">
-              my skill & service
-            </h2>
+            <Translation sideRun="-y" sidePx={50}>
+              <h2 className="mb-[32px] inline-block font-Thunder text-[5rem] font-semibold uppercase msm:text-[2.85rem]">
+                my skill & service
+              </h2>
+            </Translation>
           </div>
           <div>
             {info.map((item, index) => (
