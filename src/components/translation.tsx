@@ -22,7 +22,7 @@ const Translation = React.forwardRef<HTMLDivElement, divProps>(({ sideRun = 'x',
         opacity: 1,
       }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.5, ease: 'easeOut' }}
       className={twMerge('', props.className)}
     >
       {props.children}

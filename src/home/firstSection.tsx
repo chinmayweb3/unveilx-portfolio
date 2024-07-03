@@ -7,7 +7,7 @@ const FirstSection = () => {
       <div className="mx-auto max-w-[1280px]">
         <div className="w-[90%]">
           <Translation sideRun="x">
-            <h1 className="mb-[10px] mt-[20px] font-Thunder text-[10rem] uppercase leading-[1.1] mlg:text-[7rem] msm:text-[3rem]">
+            <h1 className="mb-[10px] mt-[20px] font-Thunder text-[10rem] font-semibold uppercase leading-[1.1] mlg:text-[7rem] msm:text-[3rem]">
               i'm John smith{' '}
               <span className="inline-block msm:h-[40px]">
                 <img className="msm:h-full" src="./header.webp" />
