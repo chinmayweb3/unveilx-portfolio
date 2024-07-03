@@ -35,7 +35,7 @@ const info = [
   },
 ];
 
-const marqueeInfo = ['./logo1.svg', './logo2.svg', './logo3.svg', './logo4.svg', './logo5.svg', './logo6.svg'];
+const marqueeInfo = ['./logo1.svg', './logo2.svg', './logo3.svg', './logo4.svg', './logo5.svg'];
 
 const ReviewCard = ({ move, item }: { move: number; item: Record<any, string> }) => {
   return (
