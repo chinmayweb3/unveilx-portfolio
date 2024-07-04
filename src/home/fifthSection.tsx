@@ -69,7 +69,7 @@ const Marquee = () => {
         transition={{
           repeat: Infinity,
           repeatType: 'loop',
-          duration: 15,
+          duration: 10,
           ease: 'linear',
         }}
         className="flex min-w-max items-center"

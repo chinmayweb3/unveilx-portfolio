@@ -8,15 +8,15 @@ const FirstSection = () => {
         <div className="w-[90%]">
           <Translation>
             <h1 className="mb-[10px] mt-[20px] font-Thunder text-[10rem] font-semibold uppercase leading-[1.1] mlg:text-[7rem] msm:text-[3rem]">
-              i'm John smith{' '}
+              i'm John Doe{' '}
               <span className="inline-block msm:h-[40px]">
                 <img className="msm:h-full" src="./header.webp" />
               </span>{' '}
-              product designer & web{' '}
+              website developer & web{' '}
               <span className="inline-block msm:h-[40px]">
                 <img className="msm:h-full" src="./headerstar.webp" />
               </span>{' '}
-              developer
+              designer
             </h1>
           </Translation>
           <p className="max-w-[64rem] text-[2rem] text-gray1 msm:text-[1.25rem]">
